@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Next.js Example
+
+Check inside `pages/_app.tsx` to see how we loaded the script
