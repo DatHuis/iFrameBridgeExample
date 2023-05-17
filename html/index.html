@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DatHuis Partner App Demo</title>
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="title">DatHuis Partner App Demo</h1>
+    <p class="description">This page serves as demo and documentation on how to integrate
+      with the <code>iFrameBridge</code> SDK.<br>On this page you
+      can
+      open the Developer Console and play around with the API. (F12)
+    </p>
+    <h2>Loading the script</h2>
+    <code style="max-width:800px;width:100%;margin:0 auto;white-space:break-spaces">
+&lt;script&gt;
+(function (d, a, t, h, u, i, s) { d["DatHuisObject"] = u; d[u] = d[u] || function () { (d[u].q = d[u].q || []).push(arguments) }; d[u].l = 1 * new Date; se = a.createElement(t); fs = a.getElementsByTagName(t)[0]; se["async"] = 1; se.src = h; fs.parentNode.insertBefore(se, fs) })(window, document, "script", "https://btstrp.dathuis.nl/assets/iframeBridge.min.js", "iFrameBridge");
+iFrameBridge('init');
+&lt;/script&gt;
+    </code>
+    <h2>Now the <code>iFrameBridge</code> space should be available</h2>
+    <p class="description">Try:
+      <code>
+iFrameBridge('track', { name: 'test_event' });
+</code>
+    </p>
+    <p>When you want to flag the event as a conversion event:</p>
+    <code>
+iFrameBridge('track', { name: 'test_event', conversion: true });
+      </code>
+    <div class="grid">
+      <a class="card" href="https://public.app.shortcut.com/c8/dathuis/docs/33RBcGPPppKKR29v90XsL7/testing-public-docs"
+        target="_blank" rel="noopener noreferrer" class="jsx-25781291bf750 Home_card___LpL1">
+        <h3>Documentation →</h3>
+        <p>Find in-depth information about iFrameBridge features and API.</p>
+      </a>
+      <a href="https://github.com/DatHuis/iFrameBridgeExample" target="_blank" rel="noopener noreferrer" class="card">
+        <h3>Examples →</h3>
+        <p>Discover different kinds of examples including Next.js and plain HTML</p>
+      </a>
+    </div>
+  </main>
+  <script>
+    (function (d, a, t, h, u, i, s) { d["DatHuisObject"] = u; d[u] = d[u] || function () { (d[u].q = d[u].q || []).push(arguments) }; d[u].l = 1 * new Date; se = a.createElement(t); fs = a.getElementsByTagName(t)[0]; se["async"] = 1; se.src = h; fs.parentNode.insertBefore(se, fs) })(window, document, "script", "https://btstrp.dathuis.nl/assets/iframeBridge.min.js", "iFrameBridge");
+    iFrameBridge('init');
+  </script>
+</body>
+
+</html>
