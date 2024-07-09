@@ -26,12 +26,30 @@ export default function Home() {
             `
 <script>
   (function (d, a, t, h, u, i, s) { d["DatHuisObject"] = u; d[u] = d[u] || function () { (d[u].q = d[u].q || []).push(arguments) }; d[u].l = 1 * new Date; se = a.createElement(t); fs = a.getElementsByTagName(t)[0]; se["async"] = 1; se.src = h; fs.parentNode.insertBefore(se, fs) })(window, document, "script", "https://btstrp.dathuis.nl/assets/iframeBridge.min.js", "iFrameBridge");
+   
+  // Defining onConsent callback to receive the consent object
+    iFrameBridge.onConsent = (args) => {
+      // Set received consent args to the variable of your choice
+      window.__DH_CC_CONSENT_PARAMS = args;
+    };
+
   iFrameBridge('init');
 </script>
             `
           }
         </code>
-
+      <h3>Consent object is:</h3>
+      <code style={{maxWidth: '800px', width: '100%', margin: '0 auto', whiteSpace: 'break-spaces'}}>
+      {`
+      {
+        "ad_storage": 'granted' | 'denied',
+        "ad_user_data": 'granted' | 'denied',
+        "ad_personalization": 'granted' | 'denied',
+        "analytics_storage": 'granted' | 'denied'
+      }
+      `}
+    </code>
+    <br />
         <h2>Now the <code>iFrameBridge</code> space should be available</h2>
         <p>
           Try:
